@@ -1,6 +1,7 @@
 # EDA_Diagnosing_Diabetes
 In this project, you’ll imagine you are a data scientist interested in exploring data that looks at how certain diagnostic factors affect the diabetes outcome of women patients. You will use your EDA skills to help inspect, clean, and validate the data. <br/>
 Note: This<a href="https://bit.ly/2BNk3P1](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database">`dataset`<a/> is from the National Institute of Diabetes and Digestive and Kidney Diseases. 
+![EDA_Diagnosing_Diabetes](https://github.com/user-attachments/assets/d0ae5a92-e9a1-4e1d-8bdd-d529203e9a29)
 <br/>
 `I use Code Academy lesson.` <br/>
 `Improve appereance with this link:` <a href="[https://bit.ly/2BNk3P1](https://github.com/noob-hackers/grabcam/edit/master/README.md)"> https://github.com/noob-hackers/grabcam/edit/master/README.md <a> <br/>
