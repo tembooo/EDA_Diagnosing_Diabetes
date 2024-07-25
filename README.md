@@ -63,6 +63,38 @@ To investigate further, calculate summary statistics on `diabetes_data` using th
 #Step6
 print(diabetes_data.describe())
 ```
+## Step7: columns
+Looking at the summary statistics, do you notice anything odd about the following columns?
+* Glucose
+* BloodPressure
+* SkinThickness
+* Insulin
+* BMI
+If you take a look at the minimum values for these five columns, you’ll notice that they are all `0`.
+```python
+#step7
+```
+## Step8: do you spot any other outliers in the data?
+* The maximum value of the Insulin column is `846`, which is abnormally high.
+* The maximum value of the Pregnancies column is `17`. While having `17` pregnancies is not impossible, this case might be something to look further into to determine its accuracy.
+As you can see, EDA helps inform the data cleaning process by helping catch things that aren’t immediately obvious.
+```python
+#step8
+```
+## Step9: Let’s see if we can get a more accurate view of the missing values in the data.
+Use the following code to replace the instances of `0` with `NaN` in the five columns mentioned:
+```python
+#Step9
+diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.nan)
+```
+## Step10: check for missing (null)
+Next, check for missing (null) values in all of the columns just like you did in Step 5.Now how many missing values are there?
+```python
+#Step10
+print(diabetes_data.isnull().sum())
+print(diabetes_data.info())
+```
+
 
 
 
