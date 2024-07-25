@@ -85,7 +85,8 @@ As you can see, EDA helps inform the data cleaning process by helping catch thin
 Use the following code to replace the instances of `0` with `NaN` in the five columns mentioned:
 ```python
 #Step9
-diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.nan)
+diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] =/
+ diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.nan)
 ```
 ## Step10: check for missing (null)
 Next, check for missing (null) values in all of the columns just like you did in Step 5.Now how many missing values are there?
