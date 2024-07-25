@@ -96,6 +96,36 @@ Next, check for missing (null) values in all of the columns just like you did in
 print(diabetes_data.isnull().sum())
 print(diabetes_data.info())
 ```
+# Full code
+```python
+import codecademylib3
+import pandas as pd
+import numpy as np
+#Step1 
+#Step2
+diabetes_data= pd.read_csv("diabetes.csv")
+print(diabetes_data.head())
+#Step3 
+print(len(diabetes_data.columns))
+print(diabetes_data.shape)
+#Step4
+print(len(diabetes_data))
+print(diabetes_data.shape)
+#Step5 
+print(diabetes_data.isnull().sum())
+print(diabetes_data.info())
+#Step6
+print(diabetes_data.describe())
+#Step7
+#Step8
+#Step9
+diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']] = /
+diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].replace(0,np.nan)
+#Step10
+print(diabetes_data.isnull().sum())
+print(diabetes_data.info())
+
+```
 
 
 
