@@ -125,7 +125,16 @@ To figure out why the Outcome column is of type `object (string)` instead of typ
 #Step14
 print(diabetes_data.Outcome.unique())
 ```
+Notice that we have instances of the character `'O’` in addition to the number `0`.<br/>
+The documentation tells us that the value of the Outcome column should either be a `0` or a `1`, so it seems likely that instances of the character `'O’` are misentries.<br/>
 
+## Step15: How might you resolve this issue?
+A possible next step would be to replace instances of 'O' with 0 and convert the Outcome column to type int64.
+```python
+#Step15
+diabetes_data["Outcome"] = diabetes_data["Outcome"].replace("O","0")
+print(diabetes_data.Outcome.unique())
+```
 # Full code
 ```python
 import codecademylib3
@@ -154,7 +163,17 @@ diabetes_data[['Glucose','BloodPressure','SkinThickness','Insulin','BMI']].repla
 #Step10
 print(diabetes_data.isnull().sum())
 print(diabetes_data.info())
-
+#Step11
+print(diabetes_data[diabetes_data.isnull().any(axis=1)])
+#Step12
+#Step13
+print(diabetes_data.dtypes)
+print(diabetes_data.info())
+#Step14
+print(diabetes_data.Outcome.unique())
+#Step15
+diabetes_data["Outcome"] = diabetes_data["Outcome"].replace("O","0")
+print(diabetes_data.Outcome.unique())
 ```
 
 
