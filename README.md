@@ -96,6 +96,36 @@ Next, check for missing (null) values in all of the columns just like you did in
 print(diabetes_data.isnull().sum())
 print(diabetes_data.info())
 ```
+## Step11: why we have missing data?
+Let’s take a closer look at these rows to get a better idea of why some data might be missing.
+Print out all of the rows that contain missing (null) values.
+```python
+#Step11
+print(diabetes_data[diabetes_data.isnull().any(axis=1)])
+
+```
+## Step12: patterns
+Go through the rows with missing data. Do you notice any patterns or overlaps between the missing data?
+ In fact, every single row with at least one missing value also has a missing value in the `insulin` column. 
+If patients did not have their insulin measured, why might they also not have had these other measurements taken?
+Depending on how much data is missing, you might choose to remove specific rows or impute the missing values somehow.
+
+## Step13: Does the result match what you would expect?
+To print the data types of each column, you can use `.dtypes`:
+Alternatively, you can use the `.info()` method, which will print out a concise summary of the DataFrame with the data types of each column included:
+```python
+#Step12
+#Step13
+print(diabetes_data.dtypes)
+print(diabetes_data.info())
+```
+## Step14: Convert Type of data
+To figure out why the Outcome column is of type `object (string)` instead of type `int64`, print out the unique values in the Outcome column.
+```python
+#Step14
+print(diabetes_data.Outcome.unique())
+```
+
 # Full code
 ```python
 import codecademylib3
